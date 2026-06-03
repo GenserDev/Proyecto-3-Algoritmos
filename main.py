@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-"""
-Proyecto No. 3 -- Analisis y Diseno de Algoritmos
-Seccion 10 -- Gabriel Brolo | 2026
-
-Menu principal.  Cada tarea vive en su propio modulo; este archivo
-solo las importa y expone un menu interactivo.
-"""
-
 import sys
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")

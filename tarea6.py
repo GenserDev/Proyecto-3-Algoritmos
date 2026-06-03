@@ -1,11 +1,3 @@
-"""
-Tarea 6 -- IMTF (Improved MTF, Mohanty & Tripathy) aplicado al mejor y peor
-caso de MTF.
-
-Regla look-ahead: al acceder al elemento en posicion i, se mueve al frente
-solo si aparece en los proximos i-1 elementos de la secuencia de solicitudes.
-"""
-
 from algorithms import section, run_imtf
 from tarea3 import build_sequence as min_seq
 from tarea4 import build_sequence as worst_seq
@@ -14,7 +6,6 @@ CONFIG = [0, 1, 2, 3, 4]
 
 
 def tarea6() -> tuple:
-    """Retorna (costo_imtf_mejor, costo_imtf_peor)."""
     section("TAREA 6 -- IMTF aplicado al mejor y peor caso de MTF")
 
     best  = min_seq(CONFIG, 20)

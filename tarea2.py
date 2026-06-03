@@ -1,7 +1,3 @@
-"""
-Tarea 2 -- MTF sobre la secuencia 4 3 2 1 0 1 2 3 4 3 2 1 0 1 2 3 4.
-"""
-
 from algorithms import section, run_mtf
 
 CONFIG   = [0, 1, 2, 3, 4]

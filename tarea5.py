@@ -1,14 +1,3 @@
-"""
-Tarea 5 -- MTF con elemento repetido 20 veces.
-
-Patron observado:
-  Sea e el elemento repetido en posicion inicial p, con n repeticiones.
-  Costo total = p + (n - 1) * 1 = p + n - 1
-
-  Razon: el primer acceso cuesta p (posicion inicial).
-  MTF lo mueve al frente; todos los siguientes accesos cuestan 1.
-"""
-
 from algorithms import section, run_mtf
 
 CONFIG = [0, 1, 2, 3, 4]

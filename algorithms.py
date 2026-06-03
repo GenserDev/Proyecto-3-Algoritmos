@@ -1,14 +1,7 @@
-"""
-Nucleo compartido: algoritmos MTF e IMTF y utilidades de presentacion.
-Importado por cada modulo de tarea.
-"""
-
 import sys
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-
-# ── Presentacion ──────────────────────────────────────────────────────────────
 
 def section(title: str) -> None:
     bar = "=" * 70
@@ -21,18 +14,9 @@ def rule(wide: bool = False) -> None:
     print("-" * (78 if wide else 68))
 
 
-# ── MTF -- Move-to-Front ──────────────────────────────────────────────────────
-
 def run_mtf(config: list, requests: list,
             label: str = "MTF", verbose: bool = True) -> int:
-    """
-    Ejecuta MTF sobre *requests* partiendo de *config*.
-
-    Costo de acceso al elemento en posicion k (1-indexada) = k.
-    Despues de cada acceso el elemento se mueve al frente.
-
-    Retorna el costo total de accesos.
-    """
+    """Costo de acceso al elemento en posicion k (1-indexada) = k."""
     lst = list(config)
     total = 0
 
@@ -61,19 +45,9 @@ def run_mtf(config: list, requests: list,
     return total
 
 
-# ── IMTF -- Improved Move-to-Front (Mohanty & Tripathy) ──────────────────────
-
 def run_imtf(config: list, requests: list,
              label: str = "IMTF", verbose: bool = True) -> int:
-    """
-    Ejecuta IMTF sobre *requests* partiendo de *config*.
-
-    Despues de acceder al elemento en posicion i, se mueve al frente
-    SOLO SI aparece en los proximos i-1 elementos de la secuencia
-    (ventana de look-ahead).
-
-    Retorna el costo total de accesos.
-    """
+    """Mueve al frente solo si el elemento aparece en los proximos i-1 elementos (look-ahead)."""
     lst = list(config)
     total = 0
 

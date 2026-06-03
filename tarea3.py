@@ -1,11 +1,3 @@
-"""
-Tarea 3 -- Secuencia de 20 solicitudes con MINIMO costo total en MTF.
-
-Estrategia: solicitar siempre el elemento en la posicion 1 (config[0]).
-Cada acceso cuesta 1; ningun acceso puede costar menos que 1.
-Cota inferior absoluta: 20 x 1 = 20.
-"""
-
 from algorithms import section, run_mtf
 
 CONFIG = [0, 1, 2, 3, 4]
@@ -13,12 +5,10 @@ LENGTH = 20
 
 
 def build_sequence(config: list = CONFIG, length: int = LENGTH) -> list:
-    """Devuelve la secuencia de minimo costo: el elemento del frente repetido."""
     return [config[0]] * length
 
 
 def tarea3() -> tuple:
-    """Retorna (secuencia, costo_total)."""
     section("TAREA 3 -- Secuencia de 20 solicitudes con MINIMO costo en MTF")
     seq = build_sequence()
     cost = run_mtf(CONFIG, seq,
